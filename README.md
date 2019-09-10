@@ -1,4 +1,5 @@
-# AngularWebsite
+# angular-website
+spring rest api + angular website example
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
