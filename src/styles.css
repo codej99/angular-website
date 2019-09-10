@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+html, body { /* 세로로 컨텐츠를 꽉 채우도록, 컨텐츠에 여백은 0 으로 */
+    height: 100%;
+    margin: 0;
+}
