@@ -11,8 +11,11 @@ import { SigninComponent } from './component/member/signin/signin.component';
 import { SignupComponent } from './component/member/signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignService } from './service/rest-api/sign.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LogoutComponent } from './component/logout/logout.component';
+import { MyinfoService } from './service/rest-api/myinfo.service';
+import { MyinfoComponent } from './component/member/myinfo/myinfo.component';
+import { HttpRequestInterceptorService } from './service/rest-api/common/http-request-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,8 @@ import { LogoutComponent } from './component/logout/logout.component';
     HomeComponent,
     SigninComponent,
     SignupComponent,
-    LogoutComponent
+    LogoutComponent,
+    MyinfoComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,13 @@ import { LogoutComponent } from './component/logout/logout.component';
     HttpClientModule
   ],
   providers: [
-    SignService
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpRequestInterceptorService,
+      multi: true,
+    },
+    SignService,
+    MyinfoService
   ],
   bootstrap: [AppComponent]
 })

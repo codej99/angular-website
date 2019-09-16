@@ -10,7 +10,7 @@
               <mat-icon class="icon">home</mat-icon>
                 <span class="label">홈</span>
             </a>
-            <a mat-list-item *ngIf="signService.isSignIn()">
+            <a mat-list-item *ngIf="signService.isSignIn()" [routerLink]="['/myinfo']">
               <mat-icon class="icon">person</mat-icon>
                 <span class="label">내정보</span>
             </a>
@@ -46,7 +46,7 @@
                     </a>
                 </li>
                 <li *ngIf="signService.isSignIn()">
-                  <a>
+                  <a [routerLink]="['/myinfo']">
                     <mat-icon class="icon">person</mat-icon>
                     <span class="label">내정보</span>
                   </a>
