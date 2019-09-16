@@ -1,0 +1,35 @@
+/* 페이지 전체 요소에 적용. 박스 사이즈를 테두리를 포함한 크기로 지정 */
+* {
+  box-sizing: border-box;
+}
+
+/* 박스 스타일 지정 */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0px;
+}
+
+/* 입력 폼 사이즈 지정 */
+.mat-form-field {
+  width: 100%;
+  min-width: 300px;
+}
+
+/* 폼 에러 표시 관련 스타일 지정 */
+.error {
+  padding: 16px;
+  width: 300px;
+  color: white;
+  background-color: red;
+}
+
+/* 버튼 스타일 지정 */
+.button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button button {
+  margin-right: 8px;
+}
