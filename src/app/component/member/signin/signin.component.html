@@ -14,7 +14,7 @@
           </mat-form-field>
         </p>
         <p *ngIf="id.touched && id.invalid && id.errors.required" class="error">
-          Id is required
+            Id is required
         </p>
         <p *ngIf="id.touched && id.invalid && id.errors.email" class="error">
             Please enter valid email
@@ -24,6 +24,7 @@
         </p>
         <div class="button">
           <button type="submit" mat-stroked-button [disabled]="!signInForm.valid">Login</button>
+          <button mat-raised-button color="primary" routerLink="/signup">SignUp</button>
         </div>
       </form>
     </mat-card-content>
