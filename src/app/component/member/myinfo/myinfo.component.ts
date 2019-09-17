@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MyinfoService } from 'src/app/service/rest-api/myinfo.service';
 import { User } from 'src/app/model/myinfo/User';
 
