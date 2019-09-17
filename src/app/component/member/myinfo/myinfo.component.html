@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-title>내정보</mat-card-title>
+    <mat-card-content>
+        <mat-list>
+        <mat-list-item>
+            <mat-icon matListIcon>email</mat-icon>
+            <h3 matLine> {{loginUser?.uid}} </h3>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-icon matListIcon>account_circle</mat-icon>
+            <h3 matLine> {{loginUser?.name}} </h3>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-icon matListIcon>date_range</mat-icon>
+            <h3 matLine> {{loginUser?.createdAt | date: 'yyyy-MM-dd HH:mm'}} </h3>
+        </mat-list-item>
+        </mat-list>
+    </mat-card-content>
+</mat-card>
