@@ -6,13 +6,15 @@ import { SignupComponent } from './component/member/signup/signup.component';
 import { LogoutComponent } from './component/logout/logout.component';
 import { MyinfoComponent } from './component/member/myinfo/myinfo.component';
 import { AuthGuard } from './guards/auth.guard';
+import { BoardComponent } from './component/board/board.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'signin', component: SigninComponent},
   {path: 'signup', component: SignupComponent},
   {path: 'logout', component: LogoutComponent},
-  {path: 'myinfo', component: MyinfoComponent, canActivate: [AuthGuard]}
+  {path: 'myinfo', component: MyinfoComponent, canActivate: [AuthGuard]},
+  {path: 'board/:boardName', component: BoardComponent}
 ];
 
 @NgModule({

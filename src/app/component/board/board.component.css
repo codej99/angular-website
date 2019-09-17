@@ -1,0 +1,35 @@
+/* 전체 영역을 반응형 으로 설정 */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+  
+  /* 앵커 태그 마우스 위치시 포인터 변경 */
+  a {
+    cursor: pointer;
+  }
+  
+  /* 테이블 헤더의 컨텐츠 중앙정렬 */
+  mat-header-cell {
+    justify-content: center;
+  }
+  
+  /* 테이블 컬럼의 컨텐츠 중앙정렬 */
+  .column-center {
+    justify-content: center;
+  }
+
+  /* 게시글 없을경우 텍스트 중앙정렬. 상단 영역 여백 처리 */
+  .no-content {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  /* 셀 스타일 지정. 마우스오버시 커서 형태 지정 */
+  mat-row:hover {
+    background: lightgray;
+    color: #fff;
+    cursor: pointer;
+  }
+  
