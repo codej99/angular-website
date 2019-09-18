@@ -14,7 +14,7 @@
               <mat-icon class="icon">person</mat-icon>
                 <span class="label">내정보</span>
             </a>
-            <a mat-list-item>
+            <a mat-list-item [routerLink]="['/board/free']">
               <mat-icon class="icon">dashboard</mat-icon>
               <span class="label">게시판</span>
             </a>
@@ -52,7 +52,7 @@
                   </a>
                 </li>
                 <li>
-                  <a>
+                  <a [routerLink]="['/board/free']">
                     <mat-icon class="icon">dashboard</mat-icon>
                     <span class="label">게시판</span>
                   </a>

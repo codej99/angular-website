@@ -1,0 +1,46 @@
+<div class="wrapper">
+<mat-card class="card">
+    <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+    <div>
+    <H3>자유 게시판</H3>
+        <button mat-raised-button color="primary" [routerLink]="['/board', boardName, 'post']">
+            <mat-icon>add</mat-icon> Add Post
+        </button>
+    </div>
+    </mat-card-title>
+    <mat-card-content>
+    <div class="container">
+        <mat-table [dataSource]="posts">
+        <ng-container matColumnDef="postId">
+            <mat-header-cell *matHeaderCellDef>no.</mat-header-cell>
+            <mat-cell *matCellDef="let element" class="column-center" [routerLink]="['/board', this.boardName, 'post', element.postId]">{{element.postId}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="title">
+            <mat-header-cell *matHeaderCellDef>제목</mat-header-cell>
+            <mat-cell *matCellDef="let element" [routerLink]="['/board', this.boardName, 'post', element.postId]">{{element.title}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="author">
+            <mat-header-cell *matHeaderCellDef>작성자</mat-header-cell>
+            <mat-cell *matCellDef="let element" class="column-center" [routerLink]="['/board', this.boardName, 'post', element.postId]">{{element.author}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="createdAt">
+            <mat-header-cell *matHeaderCellDef>작성일</mat-header-cell>
+            <mat-cell *matCellDef="let element" class="column-center" [routerLink]="['/board', this.boardName, 'post', element.postId]">{{element.createdAt | date: 'yyyy-MM-dd HH:mm'}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="modifiedAt">
+            <mat-header-cell *matHeaderCellDef>수정</mat-header-cell>
+            <mat-cell *matCellDef="let element" class="column-center">
+                <mat-icon class="icon" *ngIf="signService.isSignIn() && loginUser?.msrl == element?.user.msrl" [routerLink]="['/board', boardName, 'post', element.postId, 'modify']">edit</mat-icon>
+                <mat-icon class="icon" *ngIf="signService.isSignIn() && loginUser?.msrl == element?.user.msrl" (click)="delete(element.postId)">delete_forever</mat-icon>
+            </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+        <div *ngIf="posts.length === 0" class="no-content">
+            등록된 게시글이 없습니다.
+        </div>
+    </div>
+    </mat-card-content>
+</mat-card>
+</div>

@@ -1,3 +1,4 @@
+import { BoardService } from './service/rest-api/board.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -16,6 +17,10 @@ import { LogoutComponent } from './component/logout/logout.component';
 import { MyinfoService } from './service/rest-api/myinfo.service';
 import { MyinfoComponent } from './component/member/myinfo/myinfo.component';
 import { HttpRequestInterceptorService } from './service/rest-api/common/http-request-interceptor.service';
+import { BoardComponent } from './component/board/board.component';
+import { PostComponent } from './component/board/post.component';
+import { PostViewComponent } from './component/board/post-view.component';
+import { PostModifyComponent } from './component/board/post-modify.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +29,11 @@ import { HttpRequestInterceptorService } from './service/rest-api/common/http-re
     SigninComponent,
     SignupComponent,
     LogoutComponent,
-    MyinfoComponent
+    MyinfoComponent,
+    BoardComponent,
+    PostComponent,
+    PostViewComponent,
+    PostModifyComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +52,8 @@ import { HttpRequestInterceptorService } from './service/rest-api/common/http-re
       multi: true,
     },
     SignService,
-    MyinfoService
+    MyinfoService,
+    BoardService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,20 @@
+/* newline(\n)을 <br>로 변경하여 적용한다. */
+.white-space-pre {
+    white-space: pre-wrap;
+}
+
+/* 리스트의 세로 사이즈를 auto로 설정 */
+.list-class mat-list-item {
+  height: auto;
+}
+
+/* 버튼 영역 스타일 지정 */
+.button {
+  margin-top: 10px;
+  text-align: right;
+}
+
+/* 버튼의 오른쪽 여백 지정 */
+.button button {
+  margin-right: 8px;
+}

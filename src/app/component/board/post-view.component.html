@@ -1,0 +1,29 @@
+<mat-card>
+    <mat-card-title>글 상세</mat-card-title>
+    <mat-card-content>
+        <mat-list class="list-class">
+            <mat-list-item>
+            <mat-icon matListIcon>title</mat-icon>
+            <div matLine>{{post?.title}}</div>
+            </mat-list-item>
+            <mat-list-item>
+            <mat-icon matListIcon>account_circle</mat-icon>
+            <div matLine>{{post?.author}}</div>
+            </mat-list-item>
+            <mat-list-item>
+            <mat-icon matListIcon>message</mat-icon>
+            <div matLine>
+                <div class="white-space-pre">{{post?.content}}</div>
+            </div>
+            </mat-list-item>
+            <mat-list-item>
+            <mat-icon matListIcon>date_range</mat-icon>
+            <div matLine>{{post?.createdAt | date: 'yyyy-MM-dd HH:mm'}}</div>
+            </mat-list-item>
+        </mat-list>
+    </mat-card-content>
+</mat-card>
+<div class="button">
+    <button mat-stroked-button color="primary" [routerLink]="['/board', boardName]">리스트</button>
+    <button mat-raised-button color="primary" *ngIf="signService.isSignIn() && loginUser?.msrl == post?.user.msrl" [routerLink]="['/board', boardName, 'post', post?.postId, 'modify']">수정</button>
+</div>
