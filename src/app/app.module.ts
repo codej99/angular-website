@@ -18,6 +18,9 @@ import { MyinfoService } from './service/rest-api/myinfo.service';
 import { MyinfoComponent } from './component/member/myinfo/myinfo.component';
 import { HttpRequestInterceptorService } from './service/rest-api/common/http-request-interceptor.service';
 import { BoardComponent } from './component/board/board.component';
+import { PostComponent } from './component/board/post.component';
+import { PostViewComponent } from './component/board/post-view.component';
+import { PostModifyComponent } from './component/board/post-modify.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { BoardComponent } from './component/board/board.component';
     SignupComponent,
     LogoutComponent,
     MyinfoComponent,
-    BoardComponent
+    BoardComponent,
+    PostComponent,
+    PostViewComponent,
+    PostModifyComponent
   ],
   imports: [
     BrowserModule,

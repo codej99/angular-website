@@ -1,0 +1,28 @@
+<div class="wrapper">
+<mat-card>
+    <mat-card-title>글수정</mat-card-title>
+    <mat-card-content>
+    <form [formGroup]="postForm" (ngSubmit)="submit()">
+        <p>
+        <mat-form-field>
+            <input type="text" [(ngModel)]="post.title" matInput placeholder="제목" formControlName="title">
+        </mat-form-field>
+        </p>
+        <p>
+        <mat-form-field>
+            <textarea [(ngModel)]="post.content" matInput placeholder="내용" formControlName="content" rows="5"></textarea>
+        </mat-form-field>
+        </p>
+        <p *ngIf="f.title.touched && f.title.invalid && f.title.errors.required" class="error">
+            Title is required
+        </p>
+        <p *ngIf="f.content.touched && f.content.invalid && f.content.errors.required" class="error">
+            Contents is required
+        </p>
+        <div class="button">
+            <button type="submit" mat-raised-button color="primary">수정</button>
+        </div>
+    </form>
+    </mat-card-content>
+</mat-card>
+</div>
