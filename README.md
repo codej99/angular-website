@@ -42,4 +42,4 @@
     - Document
         - https://daddyprogrammer.org/post/6785/spring-rest-api-angular-framework-make-board-crud/
     - Git
-        - https://github.com/codej99/angular-website/tree/feature/myinfo-authguard
+        - https://github.com/codej99/angular-website/tree/feature/board
