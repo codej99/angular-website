@@ -1,3 +1,4 @@
+import { BoardResolve } from './component/board/resolve/board-resolve';
 import { BoardService } from './service/rest-api/board.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -59,7 +60,8 @@ import { ConfirmDialogComponent } from './component/common/confirm-dialog/confir
     SignService,
     MyinfoService,
     BoardService,
-    DialogService
+    DialogService,
+    BoardResolve
   ],
   entryComponents: [
     AlertDialogComponent,

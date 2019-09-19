@@ -29,9 +29,10 @@ export class BoardComponent implements OnInit {
     }
 
   ngOnInit() {
-    this.boardService.getPosts(this.boardName).then(response => {
-      this.posts = response; 
-    });
+    // this.boardService.getPosts(this.boardName).then(response => {
+    //   this.posts = response; 
+    // });
+    this.posts = this.route.snapshot.data['posts'];
 
     if (this.signService.isSignIn()) {
       this.myinfoService.getUser()
