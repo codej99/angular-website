@@ -1,0 +1,11 @@
+/* 박스 스타일 지정 - 여백, 가운데 정렬 */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 150px 0px;
+  }
+
+  /* card 영역의 최고 가로 사이즈 지정 */
+.error-card {
+    max-width: 420px;
+}

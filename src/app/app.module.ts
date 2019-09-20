@@ -25,6 +25,7 @@ import { PostModifyComponent } from './component/board/post-modify.component';
 import { AlertDialogComponent } from './component/common/alert-dialog/alert-dialog.component';
 import { DialogService } from './service/dialog/dialog.service';
 import { ConfirmDialogComponent } from './component/common/confirm-dialog/confirm-dialog.component';
+import { Error404Component } from './component/common/error/error404.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ConfirmDialogComponent } from './component/common/confirm-dialog/confir
     PostViewComponent,
     PostModifyComponent,
     AlertDialogComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,

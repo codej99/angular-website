@@ -1,63 +1,62 @@
 /* 세로 컨텐츠들의 반응형 처리 */
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  /* 메뉴 반응형 처리 */
-  mat-sidenav-container {
-    display: flex;
-    flex: 1;
-  }
-  
-  /* 상단 메뉴 꽉차도록 처리 */
-  mat-sidenav-content {
-    width: 100%
-  }
-  
-  /* 왼쪽 메뉴 최소 가로 사이즈 지정 */
-  mat-sidenav {
-    min-width: 200px;
-  }
-  
-  /* 메뉴의 anchor 태그 스타일 지정 최초는 흰색, 클릭시 회색으로 변경 */
-  a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  a:hover,
-  a:active {
-    color: lightgray;
-  }
-  
-  /* 상단메뉴 스타일 지정. 마우스오버시 커서 형태 지정 */
-  .navigation-items {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-  }
-  
-  /* 상단 메뉴 아이콘 스타일 지정 */
-  .icon {
-    display: inline-block;
-    height: 25px;
-    margin-bottom: 2px;
-    margin-right: 15px;
-    vertical-align: middle;
-    width: 15%;
-  }
-  
-  /* 풋터 스타일 지정 */
-  footer {
-    padding: 10px 0 10px 0;
-    font-size: 12px;
-    line-height: 20px;
-    background: #3f51b5;
-    color: #fff;
-    text-align: center;
-  }
-  
-  
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* 메뉴 반응형 처리 */
+mat-sidenav-container {
+  display: flex;
+  flex: 1;
+}
+
+/* 상단 메뉴 꽉차도록 처리 */
+mat-sidenav-content {
+  width: 100%
+}
+
+/* 왼쪽 메뉴 최소 가로 사이즈 지정 */
+mat-sidenav {
+  min-width: 200px;
+}
+
+/* 메뉴의 anchor 태그 스타일 지정 최초는 흰색, 클릭시 회색으로 변경 */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:active {
+  color: lightgray;
+}
+
+/* 상단메뉴 스타일 지정. 마우스오버시 커서 형태 지정 */
+.navigation-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* 상단 메뉴 아이콘 스타일 지정 */
+.icon {
+  display: inline-block;
+  height: 25px;
+  margin-bottom: 2px;
+  margin-right: 15px;
+  vertical-align: middle;
+  width: 15%;
+}
+
+/* 풋터 스타일 지정 */
+footer {
+  padding: 10px 0 10px 0;
+  font-size: 12px;
+  line-height: 20px;
+  background: #3f51b5;
+  color: #fff;
+  text-align: center;
+}
+
