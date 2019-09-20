@@ -43,3 +43,8 @@
         - https://daddyprogrammer.org/post/6785/spring-rest-api-angular-framework-make-board-crud/
     - Git
         - https://github.com/codej99/angular-website/tree/feature/board
+- Spring Rest api + Angular framework로 웹사이트 만들기(5) – 개선사항 적용 (custom alert/confirm dialog, resolve)
+    - Document
+        - https://daddyprogrammer.org/post/7025/spring-rest-api-angular-framework-custom-alert-confirm-resolve/
+    - Git
+        - https://github.com/codej99/angular-website/tree/feature/improvement        
