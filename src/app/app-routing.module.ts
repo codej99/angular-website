@@ -11,6 +11,7 @@ import { BoardComponent } from './component/board/board.component';
 import { PostComponent } from './component/board/post.component';
 import { PostViewComponent } from './component/board/post-view.component';
 import { PostModifyComponent } from './component/board/post-modify.component';
+import { Error404Component } from './component/common/error/error404.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'board/:boardName/post', component: PostComponent, canActivate: [AuthGuard]},
   {path: 'board/:boardName/post/:postId', component: PostViewComponent},
   {path: 'board/:boardName/post/:postId/modify', component: PostModifyComponent, canActivate: [AuthGuard]},
+  {path: '**', component: Error404Component}
 ];
 
 @NgModule({
