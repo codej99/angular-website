@@ -26,6 +26,9 @@ import { AlertDialogComponent } from './component/common/alert-dialog/alert-dial
 import { DialogService } from './service/dialog/dialog.service';
 import { ConfirmDialogComponent } from './component/common/confirm-dialog/confirm-dialog.component';
 import { Error404Component } from './component/common/error/error404.component';
+import { LoadingSpinnerComponent } from './component/common/loading-spinner/loading-spinner.component';
+import { LoadingSpinnerOverlayComponent } from './component/common/loading-spinner/loading-spinner-overlay.component';
+import { LoadingSpinnerService } from './service/loading-spinner/loading-spinner.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,9 @@ import { Error404Component } from './component/common/error/error404.component';
     PostModifyComponent,
     AlertDialogComponent,
     ConfirmDialogComponent,
-    Error404Component
+    Error404Component,
+    LoadingSpinnerComponent,
+    LoadingSpinnerOverlayComponent
   ],
   imports: [
     BrowserModule,
@@ -63,11 +68,14 @@ import { Error404Component } from './component/common/error/error404.component';
     MyinfoService,
     BoardService,
     DialogService,
-    BoardResolve
+    BoardResolve,
+    LoadingSpinnerService
   ],
   entryComponents: [
     AlertDialogComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    LoadingSpinnerComponent,
+    LoadingSpinnerOverlayComponent
   ],
   bootstrap: [AppComponent]
 })

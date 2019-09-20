@@ -12,6 +12,8 @@ import { PostComponent } from './component/board/post.component';
 import { PostViewComponent } from './component/board/post-view.component';
 import { PostModifyComponent } from './component/board/post-modify.component';
 import { Error404Component } from './component/common/error/error404.component';
+import { LoadingSpinnerOverlayComponent } from './component/common/loading-spinner/loading-spinner-overlay.component';
+import { LoadingSpinnerComponent } from './component/common/loading-spinner/loading-spinner.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -23,6 +25,8 @@ const routes: Routes = [
   {path: 'board/:boardName/post', component: PostComponent, canActivate: [AuthGuard]},
   {path: 'board/:boardName/post/:postId', component: PostViewComponent},
   {path: 'board/:boardName/post/:postId/modify', component: PostModifyComponent, canActivate: [AuthGuard]},
+  {path: 'spinner', component: LoadingSpinnerComponent},
+  {path: 'spinner2', component: LoadingSpinnerOverlayComponent},
   {path: '**', component: Error404Component}
 ];
 
