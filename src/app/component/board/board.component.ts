@@ -1,3 +1,4 @@
+import { DialogService } from './../../service/dialog/dialog.service';
 import { MyinfoService } from 'src/app/service/rest-api/myinfo.service';
 import { SignService } from 'src/app/service/rest-api/sign.service';
 import { BoardService } from './../../service/rest-api/board.service';
@@ -22,14 +23,16 @@ export class BoardComponent implements OnInit {
     private route: ActivatedRoute,
     private signService: SignService,
     private myinfoService: MyinfoService,
-    private router: Router) {
+    private router: Router,
+    private dialogService: DialogService) {
       this.boardName = this.route.snapshot.params['boardName'];
     }
 
   ngOnInit() {
-    this.boardService.getPosts(this.boardName).then(response => {
-      this.posts = response; 
-    });
+    // this.boardService.getPosts(this.boardName).then(response => {
+    //   this.posts = response; 
+    // });
+    this.posts = this.route.snapshot.data['posts'];
 
     if (this.signService.isSignIn()) {
       this.myinfoService.getUser()
@@ -40,10 +43,18 @@ export class BoardComponent implements OnInit {
   }
 
   delete(postId: number) {
-    if(confirm('정말 삭제하시겠습니까?')) {
-      this.boardService.deletePost(postId).then(response => {
-        window.location.reload();
-      });
-    }
+    // if(confirm('정말 삭제하시겠습니까?')) {
+    //   this.boardService.deletePost(postId).then(response => {
+    //     window.location.reload();
+    //   });
+    // }
+
+    this.dialogService.confirm('삭제 요청 확인', '정말로 삭제하시겠습니까?').afterClosed().subscribe(result => {
+      if (result) {
+        this.boardService.deletePost(postId).then(response => {
+          window.location.reload();
+        });
+      }
+    });
   }
 }

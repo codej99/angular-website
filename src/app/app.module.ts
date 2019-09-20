@@ -1,3 +1,4 @@
+import { BoardResolve } from './component/board/resolve/board-resolve';
 import { BoardService } from './service/rest-api/board.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -21,6 +22,9 @@ import { BoardComponent } from './component/board/board.component';
 import { PostComponent } from './component/board/post.component';
 import { PostViewComponent } from './component/board/post-view.component';
 import { PostModifyComponent } from './component/board/post-modify.component';
+import { AlertDialogComponent } from './component/common/alert-dialog/alert-dialog.component';
+import { DialogService } from './service/dialog/dialog.service';
+import { ConfirmDialogComponent } from './component/common/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,9 @@ import { PostModifyComponent } from './component/board/post-modify.component';
     BoardComponent,
     PostComponent,
     PostViewComponent,
-    PostModifyComponent
+    PostModifyComponent,
+    AlertDialogComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +59,13 @@ import { PostModifyComponent } from './component/board/post-modify.component';
     },
     SignService,
     MyinfoService,
-    BoardService
+    BoardService,
+    DialogService,
+    BoardResolve
+  ],
+  entryComponents: [
+    AlertDialogComponent,
+    ConfirmDialogComponent
   ],
   bootstrap: [AppComponent]
 })

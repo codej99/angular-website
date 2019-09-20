@@ -1,3 +1,4 @@
+import { BoardResolve } from './component/board/resolve/board-resolve';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './component/home.component';
@@ -17,7 +18,7 @@ const routes: Routes = [
   {path: 'signup', component: SignupComponent},
   {path: 'logout', component: LogoutComponent},
   {path: 'myinfo', component: MyinfoComponent, canActivate: [AuthGuard]},
-  {path: 'board/:boardName', component: BoardComponent},
+  {path: 'board/:boardName', component: BoardComponent, resolve: {posts: BoardResolve}},
   {path: 'board/:boardName/post', component: PostComponent, canActivate: [AuthGuard]},
   {path: 'board/:boardName/post/:postId', component: PostViewComponent},
   {path: 'board/:boardName/post/:postId/modify', component: PostModifyComponent, canActivate: [AuthGuard]},
