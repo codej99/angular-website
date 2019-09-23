@@ -23,7 +23,8 @@
     background-color: rgba(255, 255, 255, 0.5);
     z-index: 998;
 }
-.spinner-wrapper app-spinner {
+
+.spinner-wrapper app-loading-spinner {
     width: 6rem;
     height: 6rem;
-}  
+}

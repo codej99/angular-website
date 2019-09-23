@@ -1,11 +1,7 @@
 <div class="wrapper">
-<div class="overlay" *ngIf="showSpinner">
-    <div class="spinner-wrapper">
-    <app-loading-spinner [message]="message"></app-loading-spinner>
+    <div class="overlay">
+        <div class="spinner-wrapper">
+        <app-loading-spinner></app-loading-spinner>
+        </div>
     </div>
-</div>
-
-<div class="loaded-content" [class.blurred]="showSpinner">
-    <ng-content></ng-content>
-</div>
 </div>
