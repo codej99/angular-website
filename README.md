@@ -3,9 +3,9 @@
 ### 0. 개요
 - Angular Front Framework를 사용하여 기본적인 웹사이트를 Step by Step으로 만들어 나가는 프로젝트
 - BackEnd Resource 서버는 SpringBoot2 RESTful api를 이용 
-    - https://daddyprogrammer.org/post/series/springboot2%eb%a1%9c-rest-api-%eb%a7%8c%eb%93%a4%ea%b8%b0/
+    - https://daddyprogrammer.org/post/series/springboot2-make-rest-api/
 - daddyprogrammer.org에서 강의 내용 연재하고 있으며 Github로 소스 공개
-    - https://daddyprogrammer.org/post/series/spring-rest-api-angular-framework%eb%a1%9c-%ec%9b%b9%ec%82%ac%ec%9d%b4%ed%8a%b8-%eb%a7%8c%eb%93%a4%ea%b8%b0/
+    - https://daddyprogrammer.org/post/series/spring-rest-api-angular-framework-make-website/
 
 ### 1. 개발환경
 - Angular CLI: 8.0.6
