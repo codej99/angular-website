@@ -17,6 +17,8 @@
 - SpringBoot API Run
     - http://localhost:8080
     - Swagger: http://localhost:8080/swagger-ui.html
+- Angular Install
+    - npm install -g @angular/cli
 - Angular Run
     - npm install ( run only once )
     - npm start
