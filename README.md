@@ -1,3 +1,7 @@
+![node_11](https://img.shields.io/badge/node.js-v11.4.0-green?logo=node.js)
+![angular](https://img.shields.io/badge/angular-v8.0.3-red?logo=angularjs)
+![typescript](https://img.shields.io/badge/typescript-latest-blue?logo=typescript)
+
 # angular2로 website 만들기 프로젝트
 
 ### 0. 개요
