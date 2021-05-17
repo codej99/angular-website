@@ -30,7 +30,7 @@ export class SignupComponent {
   checkPassword(group: FormGroup) {
     let password = group.controls.password.value;
     let passwordRe = group.controls.password_re.value;
-    return password === '' || passwordRe === '' || password === passwordRe ? null : { notSame : true }
+    return password === '' || passwordRe === '' || password === passwordRe ? null : { notSame : true };
   }
 
   // form field에 쉽게 접근하기 위해 getter 세팅
